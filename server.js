@@ -17,7 +17,7 @@ app.use(cors());
 
 
 
-app.get('/location:search', async(req, res) => {
+app.get('/location', async(req, res) => {
   try {
     const URL = `https://us1.locationiq.com/v1/search.php?key=${process.env.LOCATION_KEY}&q=${req.query.search}&format=json`;
   
