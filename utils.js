@@ -12,10 +12,27 @@ function mungeWeather(weather) {
     return {       
 
       forecast: item.weather.description,
-      time: item.datetime       
+      time: item.datetime     
+
     };
   }).slice(0, 8);
 }
   
 
-module.exports = { mungeLocation, mungeWeather };
+function mungeYelp(yelp) {
+  return yelp.businesses.map(item => {
+    return {       
+  
+      name: item.name,
+      image_url: item.image_url,
+      price:  item.price,
+      rating: item.price,
+      url: item.url,
+  
+    };
+  }).slice(0, 20);
+}
+
+
+
+module.exports = { mungeLocation, mungeWeather, mungeYelp };
