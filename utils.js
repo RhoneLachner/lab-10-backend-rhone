@@ -1,4 +1,4 @@
-export function mungeLocation(location) {
+function mungeLocation(location) {
   return {
         
     formatted_query: location[0].display_name,
