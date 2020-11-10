@@ -8,12 +8,13 @@ function mungeLocation(location) {
 }
 
 function mungeWeather(weather) {
-//   return weather.data.map(item => {
-  return {        
-    forecast: item.weather.description,
-    time: item.datetime       
-  };
-//   }).slice(0, 8);
+  return weather.data.map(item => {
+    return {       
+
+      forecast: item.weather.description,
+      time: item.datetime       
+    };
+  }).slice(0, 8);
 }
   
 
