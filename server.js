@@ -9,7 +9,7 @@ const express = require('express');
 const cors = require('cors');
 const request = require('superagent');
 const app = require('./lib/app');
-const port = 3000;
+
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
@@ -32,6 +32,6 @@ app.get('/location', async(req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`);
 });
