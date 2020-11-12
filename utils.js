@@ -33,6 +33,25 @@ function mungeYelp(yelp) {
   }).slice(0, 20);
 }
 
+function mungeHiking(hiking) {
+  return hiking.data.map(item => {
+    return {       
 
+      name: item.name,
+      location: item.location,
+      length: item.length,
+      stars: item.stars, 
+      star_votes: item.starVotes,
+      summary: item.summary, 
+      trail_url: item.trailUrl,
+      conditions: item.conditons, 
+      conditionStatus: item.conditionStatus,
+      conditionDetails: item.conditionDetails,
+      conditionDate: item.conditionDate,
+          
 
-module.exports = { mungeLocation, mungeWeather, mungeYelp };
+    };
+  }).slice(0, 8);
+}
+
+module.exports = { mungeLocation, mungeWeather, mungeYelp, mungeHiking };
